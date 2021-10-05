@@ -5,13 +5,33 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <App />
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
+// import React from 'react';
+// import reactDom from 'react-dom';
+// import { createStore } from 'redux';
+// import Reducer from './Practice/Redux/reducers'
+// import Counter from './Practice/Redux/components/counter';
+// import './index.css';
+
+// const store = createStore(Reducer)
+// const rootElement = document.getElementById('root');
+
+// const render = () => reactDom.render(
+//   <Counter
+//     value={store.getState()}
+//     onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
+//     onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
+//   />, rootElement
+// )
+
+// render()
+// store.subscribe(render)
