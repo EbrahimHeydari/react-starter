@@ -1,5 +1,4 @@
-import React, { useState, createContext, useContext, useReducer } from 'react';
-import { v4 as uuid } from 'uuid';
+import React, {createContext, useContext, useReducer } from 'react';
 import GameReducer from '../reducers';
 import { ThemeContext } from './theme';
 
