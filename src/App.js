@@ -1,3 +1,20 @@
+// portals
+// import ReactDOM from 'react-dom'
+// function App() {
+  
+//   // Creating a portal
+//   return ReactDOM.createPortal(
+//     <h1>Portal demo</h1>,
+//     document.getElementById('portal')
+//  )
+// }
+  
+// export default App;
+
+
+
+
+
 // Practice (Router)
 // import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 // import Home from './Practice/Router/pages/Home';

@@ -20,6 +20,7 @@ class Counter extends Component {
 
     // componentDidUpdate() {
     //     console.log("componentDidUpdate")
+    // این تابع مهم ترین تابع در چرخه ی به روز رسانی است
     // }
 
     // Unmounting
