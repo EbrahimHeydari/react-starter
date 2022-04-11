@@ -18,6 +18,11 @@ nav ul li {
   margin : 0 10px;
 }
 
+li a.active {
+  text-decoration: none;
+  color: orange;
+}
+
 .navbar {
   padding   : 10px 2px;
   text-align: center;

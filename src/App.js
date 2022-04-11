@@ -16,11 +16,12 @@
 
 
 // Practice (Router)
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink, Routes } from "react-router-dom";
 import Home from './Practice/Router/pages/Home';
 import About from './Practice/Router/pages/About';
 import Contact from './Practice/Router/pages/Contact';
 import Support from './Practice/Router/pages/Support';
+import './App.css';
 
 function App() {
   return (
@@ -29,16 +30,16 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/About">About</Link>
+              <NavLink to="/About">About</NavLink>
             </li>
             <li>
-              <Link to="/Contact">Contact</Link>
+              <NavLink to="/Contact">Contact</NavLink>
             </li>
             <li>
-              <Link to="/Support">Support</Link>
+              <NavLink to="/Support">Support</NavLink>
             </li>
           </ul>
         </nav>
