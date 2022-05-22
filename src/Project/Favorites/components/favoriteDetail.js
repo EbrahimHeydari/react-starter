@@ -3,8 +3,7 @@ import { FavoriteContext } from '../contexts/favorite';
 import remove from './../delete.svg';
 
 const FavoriteDetail = ({ favorite }) => {
-    
-    const { dispatch } = useContext(FavoriteContext);
+    const { dispatch } = useContext(FavoriteContext)
 
     return (
         <li>
@@ -19,7 +18,7 @@ const FavoriteDetail = ({ favorite }) => {
                 {` ${favorite.description} `}
             </div>
         </li>
-    );
+    )
 }
 
 export default FavoriteDetail;
