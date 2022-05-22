@@ -5,10 +5,10 @@ import { ThemeContext } from './theme';
 export const FavoriteContext = createContext()
 
 const FavoriteProvider = props => {
-
-    // Only reducer
+    // use reducer
     const { isLight, light, dark } = useContext(ThemeContext)
-    const theme = isLight ? light : dark;
+    const theme = isLight ? light : dark
+
     const [favorites, dispatch] = useReducer(FavoriteReducer, [],
         () => {
             const data = localStorage.getItem('Favorite')

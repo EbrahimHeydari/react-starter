@@ -94,7 +94,7 @@
 
 
 
-// Library (both)
+// Library (state)
 // import React from 'react';
 // import BookForm from './Project/Library/components/bookForm';
 // import BookList from './Project/Library/components/bookList';
@@ -105,7 +105,7 @@
 
 // function App() {
 //   return (
-//     <div className="App">
+//     <div className='App'>
 //       <BookTheme>
 //         <BookProvider>
 //           <BookNavbar/>
@@ -125,27 +125,27 @@
 
 
 // Favorites (Reducer)
-// import React from 'react';
-// import FavoriteProvider from './Project/Favorites/contexts/favorite';
-// import FavoriteTheme from './Project/Favorites/contexts/theme';
-// import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar';
-// import FavoriteForm from './Project/Favorites/components/favoriteForm';
-// import FavoriteList from './Project/Favorites/components/favoriteList';
-// import ChangeTheme from './Project/Favorites/components/changeTheme';
+import React from 'react';
+import FavoriteProvider from './Project/Favorites/contexts/favorite';
+import FavoriteTheme from './Project/Favorites/contexts/theme';
+import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar';
+import FavoriteForm from './Project/Favorites/components/favoriteForm';
+import FavoriteList from './Project/Favorites/components/favoriteList';
+import ChangeTheme from './Project/Favorites/components/changeTheme';
 
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <FavoriteTheme>
-//         <FavoriteProvider>
-//             <FavoriteNavbar />
-//             <FavoriteList />
-//             <FavoriteForm />
-//             <ChangeTheme />
-//         </FavoriteProvider>
-//       </FavoriteTheme>
-//     </div>
-//   );
-// }
+const App = () => {
+  return (
+    <div className='App'>
+      <FavoriteTheme>
+        <FavoriteProvider>
+            <FavoriteNavbar />
+            <FavoriteList />
+            <FavoriteForm />
+            <ChangeTheme />
+        </FavoriteProvider>
+      </FavoriteTheme>
+    </div>
+  )
+}
 
-// export default App;
+export default App;

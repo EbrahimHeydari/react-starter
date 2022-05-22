@@ -1,9 +1,8 @@
 import React, { createContext, useState } from 'react';
 
-export const ThemeContext = createContext();
+export const ThemeContext = createContext()
 
-const FavoriteTheme = (props) => {
-
+const FavoriteTheme = props => {
     const [isLight, setLight] = useState(true)
     const [light] = useState({
         text: '#555',
@@ -18,15 +17,13 @@ const FavoriteTheme = (props) => {
         color: 'orange'
     })
 
-    const setTheme = () => {
-        setLight((isLight) => isLight = !isLight)
-    }
+    const setTheme = () => setLight(isLight => isLight = !isLight)
 
     return (
-        <ThemeContext.Provider value={{isLight, light, dark, setTheme }}>
+        <ThemeContext.Provider value={{ isLight, light, dark, setTheme }}>
             {props.children}
         </ThemeContext.Provider>
-    );
+    )
 }
 
 export default FavoriteTheme;

@@ -3,20 +3,22 @@ import { FavoriteContext } from '../contexts/favorite';
 import { ThemeContext } from '../contexts/theme';
 
 const FavoriteForm = () => {
+    const { dispatch } = useContext(FavoriteContext)
+    const { isLight, light, dark } = useContext(ThemeContext)
+    const theme = isLight ? light : dark
     
-    const { dispatch } = useContext(FavoriteContext);
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
-    const { isLight, light, dark } = useContext(ThemeContext)
-    const theme = isLight ? light : dark;
 
-    const SubmitHandler = (event) => {
-        event.preventDefault();
-        dispatch({type: 'ADD_FAVORITE', favorite:{
-            name, description
-        }})
-        setName('');
-        setDescription('');
+    const SubmitHandler = event => {
+        event.preventDefault()
+        dispatch({
+            type: 'ADD_FAVORITE', favorite: {
+                name, description
+            }
+        })
+        setName('')
+        setDescription('')
     }
 
     return (
@@ -27,7 +29,7 @@ const FavoriteForm = () => {
                 onChange={(event) => setDescription(event.target.value)} style={{ background: theme.bg, color: theme.text }}></textarea>
             <button type="submit" className="send" style={{ background: theme.bg, color: theme.text }}>افزودن</button>
         </form>
-    );
+    )
 }
 
 export default FavoriteForm;
