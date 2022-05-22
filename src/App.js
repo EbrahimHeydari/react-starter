@@ -17,10 +17,10 @@
 
 // Practice (Router)
 // import { BrowserRouter as Router, Route, NavLink, Routes } from "react-router-dom";
-// import Home from './Practice/Router/pages/Home';
-// import About from './Practice/Router/pages/About';
-// import Contact from './Practice/Router/pages/Contact';
-// import Support from './Practice/Router/pages/Support';
+// import Home from './Practice/Router/Home';
+// import About from './Practice/Router/About';
+// import Contact from './Practice/Router/Contact';
+// import Support from './Practice/Router/Support';
 // import './App.css';
 
 // function App() {
@@ -52,7 +52,7 @@
 //         </Routes>
 //       </div>
 //     </Router>
-//   );
+//   )
 // }
 
 // export default App;
@@ -125,27 +125,27 @@
 
 
 // Favorites (Reducer)
-import React from 'react';
-import FavoriteProvider from './Project/Favorites/contexts/favorite';
-import FavoriteTheme from './Project/Favorites/contexts/theme';
-import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar';
-import FavoriteForm from './Project/Favorites/components/favoriteForm';
-import FavoriteList from './Project/Favorites/components/favoriteList';
-import ChangeTheme from './Project/Favorites/components/changeTheme';
+// import React from 'react';
+// import FavoriteProvider from './Project/Favorites/contexts/favorite';
+// import FavoriteTheme from './Project/Favorites/contexts/theme';
+// import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar';
+// import FavoriteForm from './Project/Favorites/components/favoriteForm';
+// import FavoriteList from './Project/Favorites/components/favoriteList';
+// import ChangeTheme from './Project/Favorites/components/changeTheme';
 
-const App = () => {
-  return (
-    <div className='App'>
-      <FavoriteTheme>
-        <FavoriteProvider>
-            <FavoriteNavbar />
-            <FavoriteList />
-            <FavoriteForm />
-            <ChangeTheme />
-        </FavoriteProvider>
-      </FavoriteTheme>
-    </div>
-  )
-}
+// const App = () => {
+//   return (
+//     <div className='App'>
+//       <FavoriteTheme>
+//         <FavoriteProvider>
+//             <FavoriteNavbar />
+//             <FavoriteList />
+//             <FavoriteForm />
+//             <ChangeTheme />
+//         </FavoriteProvider>
+//       </FavoriteTheme>
+//     </div>
+//   )
+// }
 
-export default App;
+// export default App;

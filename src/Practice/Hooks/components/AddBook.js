@@ -1,26 +1,25 @@
 import React, { useState } from 'react';
 
-const AddNewBook = ({AddBook}) => {
+const AddNewBook = ({ AddBook }) => {
+    const [name, setBook] = useState('')
 
-    const [name, setBook] = useState('');
-
-    const handleSubmit = (event) => {
+    const handleSubmit = event => {
         event.preventDefault()
         AddBook(name)
-        setBook('');
+        setBook('')
     }
 
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor="new">Book Name: </label>
-            <input id="new" value={name} required 
+            <input id="new" value={name} required
                 onChange={
                     (event) => setBook(event.target.value)
                 }
             />
             <button type="submit">Add</button>
         </form>
-    );
+    )
 }
- 
+
 export default AddNewBook;

@@ -1,9 +1,8 @@
 import React, {createContext , useState} from 'react';
 
-export const BookContextHook = createContext();
+export const BookContextHook = createContext()
 
-const BookListProvider = (props) => {
-
+const BookListProvider = props => {
     const [books] = useState([
         {title: 'اثر مرکب', id: 1 },
         {title: 'قدرت عادت', id: 2 },
@@ -15,7 +14,7 @@ const BookListProvider = (props) => {
         <BookContextHook.Provider value={{books}}>
             {props.children}
         </BookContextHook.Provider>
-    );
+    )
 }
  
 export default BookListProvider;

@@ -3,7 +3,6 @@ import { LoginContext } from '../../ContextAPI/contexts/LoginContext';
 import { ThemeContext } from '../../ContextAPI/contexts/ThemeContext';
 
 const NavbarHook = () => {
-
     const { isLight, light, dark } = useContext(ThemeContext)
     const { login, ChangeLogin } = useContext(LoginContext)
     const theme = isLight ? light : dark
@@ -22,7 +21,7 @@ const NavbarHook = () => {
                 </ul>
             </h1>
         </nav>
-    );
+    )
 }
 
 export default NavbarHook;

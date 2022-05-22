@@ -5,12 +5,11 @@ import AddNewBook from './AddBook';
 var i = -1;
 
 const BookList = () => {
-
     const [books, setBook] = useState([])
 
-    const AddBook = (name) => {
+    const AddBook = name => {
         setBook([...books, { name, id: uuid() }])
-        i++;
+        i++
     }
 
     useEffect(() => console.log('Effect: ', books[i]), [books])
@@ -22,7 +21,7 @@ const BookList = () => {
             </ul>
             <AddNewBook AddBook={AddBook} />
         </div>
-    );
+    )
 }
 
 export default BookList;

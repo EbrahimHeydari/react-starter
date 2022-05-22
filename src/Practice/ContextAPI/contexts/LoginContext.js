@@ -1,6 +1,6 @@
 import React, { Component, createContext } from 'react';
 
-export const LoginContext = createContext();
+export const LoginContext = createContext()
 
 class LoginProvider extends Component {
     state = {
@@ -18,7 +18,7 @@ class LoginProvider extends Component {
             <LoginContext.Provider value={{...this.state , ChangeLogin: this.changeLogin}}>
                 {this.props.children}
             </LoginContext.Provider>
-        );
+        )
     }
 }
  

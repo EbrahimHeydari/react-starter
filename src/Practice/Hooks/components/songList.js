@@ -5,24 +5,16 @@ import NewSongForm from './AddSong';
 var i = 1;
 
 const SongList = () => {
-    
     const [songs, setSong] = useState([
         { title: 'Music 1', id: 1 },
         { title: 'Music 2', id: 2 }
     ])
     
-    const [age, setAge] = useState(19);
+    const [age, setAge] = useState(19)
     
-    const addSong = (title) => {
-        // let randomId = Math.round(Math.random() * 999999999);
-        // setSong([...songs, { title, id: randomId()}])
-        
-        setSong([...songs, { title, id: uuid()}])
-        // ++i;
-    }
+    const addSong = title => setSong([...songs, { title, id: uuid()}])
     
-    useEffect( () => console.log('useEffect:', songs[i]), [songs])
-    useEffect( () => console.log('useEffect:', age) , [age]);
+    useEffect( () => console.log('useEffect:', age) , [age])
 
     return (
         <div>
@@ -32,7 +24,7 @@ const SongList = () => {
             <NewSongForm addSong={addSong}/>
             <button onClick={() => setAge(age + 1)}>increase age</button>
         </div>
-    );
+    )
 }
 
 export default SongList;

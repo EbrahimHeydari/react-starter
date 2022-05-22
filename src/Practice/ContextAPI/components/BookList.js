@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 
 class BookList extends Component {
-    static contextType = ThemeContext;
+    static contextType = ThemeContext
     render() {
-        const { isLight, light, dark } = this.context;
-        const theme = isLight ? light : dark;
+        const { isLight, light, dark } = this.context
+        const theme = isLight ? light : dark
         return (
             <div className="list-item" style={{ background: theme.bg, color: theme.color }}>
                 <ul>
@@ -15,7 +15,7 @@ class BookList extends Component {
                     <li style={{ background: theme.item }}>تخت خوابت را جمع کن</li>
                 </ul>
             </div>
-        );
+        )
     }
 }
 
