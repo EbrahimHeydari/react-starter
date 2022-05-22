@@ -7,16 +7,16 @@
 
 @font-face {
   font-family: 'Vazir';
-  src        : url('fonts/Vazir.woff') format('woff'),
+  src: url('fonts/Vazir.woff') format('woff'),
     url('fonts/Vazir.ttf') format('truetype');
 }
 
 body {
-  text-align                : center;
-  margin                    : 0;
-  -webkit-font-smoothing    : antialiased;
-  -moz-osx-font-smoothing   : grayscale;
-  direction              : rtl;
+  text-align: center;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
 }
 
 code {
@@ -26,12 +26,12 @@ code {
 
 textarea {
   vertical-align: middle;
-  resize        : none;
+  resize: none;
 }
 
 button {
-  margin    : 10px;
-  cursor    : pointer;
+  margin: 10px;
+  cursor: pointer;
   transition: .3s;
 }
 
@@ -45,18 +45,18 @@ ol {
 }
 
 .App {
-  margin   : 20px auto;
-  width    : 90%;
+  margin: 20px auto;
+  width: 90%;
   max-width: 700px;
 }
 
 .box {
   border-radius: 5px;
-  padding      : 20px;
+  padding: 20px;
 }
 
 .navbar {
-  padding   : 10px 20px;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -65,19 +65,19 @@ ol {
 }
 
 .list-item ul {
-  padding        : 0;
+  padding: 0;
   list-style-type: none;
 }
 
 .list-item li {
   border-radius: 4px;
-  padding      : 10px;
-  margin       : 10px 0;
+  padding: 10px;
+  margin: 10px 0;
 }
 
 .list-item .title {
   font-weight: bold;
-  font-size  : 1.2em;
+  font-size: 1.2em;
 }
 
 .list-item .subtitle {
@@ -85,7 +85,7 @@ ol {
 }
 
 .empty {
-  margin    : 20px;
+  margin: 20px;
   text-align: center;
 }
 
@@ -94,19 +94,19 @@ form {
 }
 
 .detail {
-  width     : 100%;
-  padding   : 10px 20px;
+  width: 100%;
+  padding: 10px 20px;
   box-sizing: border-box;
-  margin    : 6px 0;
-  border    : 0;
+  margin: 6px 0;
+  border: 0;
   border-radius: 5px;
 }
 
 .send {
-  padding      : 6px 10px;
-  display      : block;
-  margin       : 10px auto;
-  border       : 0;
+  padding: 6px 10px;
+  display: block;
+  margin: 10px auto;
+  border: 0;
   border-radius: 5px;
 }
 
@@ -120,5 +120,5 @@ form {
 
 .delete:hover~div {
   text-decoration: line-through;
-  opacity        : 0.7;
+  opacity: 0.7;
 }

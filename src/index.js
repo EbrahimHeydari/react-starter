@@ -9,6 +9,6 @@ ReactDOM.render(
     <App />
   </React.Fragment>,
   document.getElementById('root')
-);
+)
 
-reportWebVitals();
+reportWebVitals()
