@@ -1,7 +1,6 @@
 // portals
 // import ReactDOM from 'react-dom'
 // function App() {
-
 //   // Creating a portal
 //   return ReactDOM.createPortal(
 //     <h1>Portal demo</h1>,
@@ -96,12 +95,12 @@
 
 // Library (state)
 // import React from 'react';
+// import BookTheme from './Project/Library/contexts/theme';
+// import BookProvider from './Project/Library/contexts/book';
 // import BookForm from './Project/Library/components/bookForm';
 // import BookList from './Project/Library/components/bookList';
-// import ToggleTheme from './Project/Library/components/toggleTheme';
-// import BookProvider from './Project/Library/contexts/book';
-// import BookTheme from './Project/Library/contexts/theme';
 // import BookNavbar from './Project/Library/components/bookNavbar';
+// import ToggleTheme from './Project/Library/components/toggleTheme';
 
 // function App() {
 //   return (
@@ -125,27 +124,27 @@
 
 
 // Favorites (Reducer)
-// import React from 'react';
-// import FavoriteProvider from './Project/Favorites/contexts/favorite';
-// import FavoriteTheme from './Project/Favorites/contexts/theme';
-// import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar';
-// import FavoriteForm from './Project/Favorites/components/favoriteForm';
-// import FavoriteList from './Project/Favorites/components/favoriteList';
-// import ChangeTheme from './Project/Favorites/components/changeTheme';
+import React from 'react';
+import FavoriteTheme from './Project/Favorites/contexts/theme';
+import FavoriteProvider from './Project/Favorites/contexts/favorite';
+import ChangeTheme from './Project/Favorites/components/changeTheme';
+import FavoriteForm from './Project/Favorites/components/favoriteForm';
+import FavoriteList from './Project/Favorites/components/favoriteList';
+import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar';
 
-// const App = () => {
-//   return (
-//     <div className='App'>
-//       <FavoriteTheme>
-//         <FavoriteProvider>
-//             <FavoriteNavbar />
-//             <FavoriteList />
-//             <FavoriteForm />
-//             <ChangeTheme />
-//         </FavoriteProvider>
-//       </FavoriteTheme>
-//     </div>
-//   )
-// }
+const App = () => {
+  return (
+    <div className='App'>
+      <FavoriteTheme>
+        <FavoriteProvider>
+            <FavoriteNavbar />
+            <FavoriteList />
+            <FavoriteForm />
+            <ChangeTheme />
+        </FavoriteProvider>
+      </FavoriteTheme>
+    </div>
+  )
+}
 
-// export default App;
+export default App;
