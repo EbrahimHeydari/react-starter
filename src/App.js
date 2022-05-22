@@ -16,46 +16,46 @@
 
 
 // Practice (Router)
-import { BrowserRouter as Router, Route, NavLink, Routes } from "react-router-dom";
-import Home from './Practice/Router/pages/Home';
-import About from './Practice/Router/pages/About';
-import Contact from './Practice/Router/pages/Contact';
-import Support from './Practice/Router/pages/Support';
-import './App.css';
+// import { BrowserRouter as Router, Route, NavLink, Routes } from "react-router-dom";
+// import Home from './Practice/Router/pages/Home';
+// import About from './Practice/Router/pages/About';
+// import Contact from './Practice/Router/pages/Contact';
+// import Support from './Practice/Router/pages/Support';
+// import './App.css';
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/About">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/Contact">Contact</NavLink>
-            </li>
-            <li>
-              <NavLink to="/Support">Support</NavLink>
-            </li>
-          </ul>
-        </nav>
-        <p>Let's Add Routing</p>
-        <Routes>
-          <Route path="/About" element={<About />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
+// function App() {
+//   return (
+//     <Router>
+//       <div className="App">
+//         <nav>
+//           <ul>
+//             <li>
+//               <NavLink to="/">Home</NavLink>
+//             </li>
+//             <li>
+//               <NavLink to="/About">About</NavLink>
+//             </li>
+//             <li>
+//               <NavLink to="/Contact">Contact</NavLink>
+//             </li>
+//             <li>
+//               <NavLink to="/Support">Support</NavLink>
+//             </li>
+//           </ul>
+//         </nav>
+//         <p>Let's Add Routing</p>
+//         <Routes>
+//           <Route path="/About" element={<About />} />
+//           <Route path="/support" element={<Support />} />
+//           <Route path="/Contact" element={<Contact />} />
+//           <Route path="/" element={<Home />} />
+//         </Routes>
+//       </div>
+//     </Router>
+//   );
+// }
 
-export default App;
+// export default App;
 
 
 
@@ -157,57 +157,27 @@ export default App;
 
 
 // Favorites (Reducer)
-// import React from 'react';
-// import FavoriteProvider from './Project/Favorites/contexts/favorite';
-// import FavoriteTheme from './Project/Favorites/contexts/theme';
-// import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar';
-// import FavoriteForm from './Project/Favorites/components/favoriteForm';
-// import FavoriteList from './Project/Favorites/components/favoriteList';
-// import ChangeTheme from './Project/Favorites/components/changeTheme';
+import React from 'react';
+import FavoriteProvider from './Project/Favorites/contexts/favorite';
+import FavoriteTheme from './Project/Favorites/contexts/theme';
+import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar';
+import FavoriteForm from './Project/Favorites/components/favoriteForm';
+import FavoriteList from './Project/Favorites/components/favoriteList';
+import ChangeTheme from './Project/Favorites/components/changeTheme';
 
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <FavoriteTheme>
-//         <FavoriteProvider>
-//             <FavoriteNavbar />
-//             <FavoriteList />
-//             <FavoriteForm />
-//             <ChangeTheme />
-//         </FavoriteProvider>
-//       </FavoriteTheme>
-//     </div>
-//   );
-// }
+const App = () => {
+  return (
+    <div className="App">
+      <FavoriteTheme>
+        <FavoriteProvider>
+            <FavoriteNavbar />
+            <FavoriteList />
+            <FavoriteForm />
+            <ChangeTheme />
+        </FavoriteProvider>
+      </FavoriteTheme>
+    </div>
+  );
+}
 
-// export default App;
-
-
-
-
-
-// Game List
-// import React from 'react';
-// import GameTheme from './Project/GameList/contexts/theme';
-// import GameProvider from './Project/GameList/contexts/game';
-// import GameForm from './Project/GameList/components/gameForm';
-// import GameList from './Project/GameList/components/gameList';
-// import GameNavbar from './Project/GameList/components/gameNavbar';
-// import ThemeChange from './Project/GameList/components/themeChange';
-
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <GameTheme>
-//         <GameProvider>
-//           <GameNavbar />
-//           <GameList />
-//           <GameForm />
-//           <ThemeChange/>
-//         </GameProvider>
-//       </GameTheme>
-//     </div>
-//   )
-// }
-
-// export default App;
+export default App;
