@@ -124,60 +124,28 @@
 
 
 
-// Play List (useState)
+// Favorites (Reducer)
 // import React from 'react';
-// import SwitchTheme from './Project/PlayList/components/switchTheme';
-// import MusicForm from './Project/PlayList/components/musicForm';
-// import MusicList from './Project/PlayList/components/musicList';
-// import MusicProvider from './Project/PlayList/contexts/music';
-// import MusicTheme from './Project/PlayList/contexts/theme';
-// import MusicLogin from './Project/PlayList/contexts/login';
-// import MusicNavbar from './Project/PlayList/components/musicNavbar';
+// import FavoriteProvider from './Project/Favorites/contexts/favorite';
+// import FavoriteTheme from './Project/Favorites/contexts/theme';
+// import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar';
+// import FavoriteForm from './Project/Favorites/components/favoriteForm';
+// import FavoriteList from './Project/Favorites/components/favoriteList';
+// import ChangeTheme from './Project/Favorites/components/changeTheme';
 
-// function App() {
+// const App = () => {
 //   return (
 //     <div className="App">
-//       <MusicTheme>
-//         <MusicProvider>
-//           <MusicLogin>
-//             <MusicNavbar />
-//             <MusicList />
-//             <MusicForm />
-//             <SwitchTheme />
-//           </MusicLogin>
-//         </MusicProvider>
-//       </MusicTheme>
+//       <FavoriteTheme>
+//         <FavoriteProvider>
+//             <FavoriteNavbar />
+//             <FavoriteList />
+//             <FavoriteForm />
+//             <ChangeTheme />
+//         </FavoriteProvider>
+//       </FavoriteTheme>
 //     </div>
-//   )
+//   );
 // }
 
 // export default App;
-
-
-
-
-// Favorites (Reducer)
-import React from 'react';
-import FavoriteProvider from './Project/Favorites/contexts/favorite';
-import FavoriteTheme from './Project/Favorites/contexts/theme';
-import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar';
-import FavoriteForm from './Project/Favorites/components/favoriteForm';
-import FavoriteList from './Project/Favorites/components/favoriteList';
-import ChangeTheme from './Project/Favorites/components/changeTheme';
-
-const App = () => {
-  return (
-    <div className="App">
-      <FavoriteTheme>
-        <FavoriteProvider>
-            <FavoriteNavbar />
-            <FavoriteList />
-            <FavoriteForm />
-            <ChangeTheme />
-        </FavoriteProvider>
-      </FavoriteTheme>
-    </div>
-  );
-}
-
-export default App;
