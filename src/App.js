@@ -136,7 +136,7 @@ const App = () => {
   return (
     <div className='App'>
       <FavoriteTheme>
-        <FavoriteProvider>
+        <FavoriteProvider danger>
             <FavoriteNavbar />
             <FavoriteList />
             <FavoriteForm />
