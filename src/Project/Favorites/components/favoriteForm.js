@@ -24,7 +24,7 @@ const FavoriteForm = () => {
   }
 
   return (
-    <form onSubmit={SubmitHandler} style={{ background: theme.item }}>
+    <form className='form' onSubmit={SubmitHandler} style={{ background: theme.item }}>
       <input
         className='detail'
         placeholder='عنوان'
