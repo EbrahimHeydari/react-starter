@@ -50,7 +50,7 @@ ol {
   max-width: 700px;
 }
 
-.box {
+.wrapper {
   border-radius: 5px;
   padding: 20px;
 }
@@ -118,7 +118,7 @@ form {
   cursor: pointer;
 }
 
-.delete:hover ~ div {
+.delete:hover~div {
   text-decoration: line-through;
   opacity: 0.7;
 }

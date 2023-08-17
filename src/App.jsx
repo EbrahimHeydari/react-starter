@@ -81,7 +81,7 @@
 
 // export default App
 
-// // UseImperativeHandle Example
+// // UseImperativeHandle and useRef Example
 // import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 
 // // Parent Component
@@ -112,7 +112,6 @@
 // 	)
 // })
 
-
 // Library (state)
 // import React from 'react'
 // import BookTheme from './Project/Library/contexts/theme'
@@ -140,27 +139,58 @@
 // export default App
 
 // Favorites (Reducer)
+// import React from 'react'
+// import FavoriteTheme from './Project/Favorites/contexts/theme'
+// import FavoriteProvider from './Project/Favorites/contexts/favorite'
+// import ChangeTheme from './Project/Favorites/components/changeTheme'
+// import FavoriteForm from './Project/Favorites/components/favoriteForm'
+// import FavoriteList from './Project/Favorites/components/favoriteList'
+// import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar'
+
+// const App = () => {
+//   return (
+//     <div className='App'>
+//       <FavoriteTheme>
+//         <FavoriteProvider>
+//           <FavoriteNavbar />
+//           <FavoriteList />
+//           <FavoriteForm />
+//           <ChangeTheme />
+//         </FavoriteProvider>
+//       </FavoriteTheme>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// intersection observer api hook
 import React from 'react'
-import FavoriteTheme from './Project/Favorites/contexts/theme'
-import FavoriteProvider from './Project/Favorites/contexts/favorite'
-import ChangeTheme from './Project/Favorites/components/changeTheme'
-import FavoriteForm from './Project/Favorites/components/favoriteForm'
-import FavoriteList from './Project/Favorites/components/favoriteList'
-import FavoriteNavbar from './Project/Favorites/components/favoriteNavbar'
+import useElementOnScreen from './hooks/useElementOnScreen'
 
 const App = () => {
-  return (
-    <div className='App'>
-      <FavoriteTheme>
-        <FavoriteProvider danger>
-          <FavoriteNavbar />
-          <FavoriteList />
-          <FavoriteForm />
-          <ChangeTheme />
-        </FavoriteProvider>
-      </FavoriteTheme>
-    </div>
-  )
+	const [containerRef, isVisible] = useElementOnScreen({
+		root: null,
+		rootMargin: '0px',
+		threshold: 1.0,
+	})
+
+	return (
+		<div className='App'>
+			<div className='isVisible'>
+				{isVisible ? 'IN VIEWPORT' : 'NOT IN VIEWPORT'}
+			</div>
+			<div className='section'></div>
+			<div
+				className='box'
+				ref={containerRef}>
+				<img
+					src='/logo192.png'
+					alt='logo'
+				/>
+			</div>
+		</div>
+	)
 }
 
 export default App

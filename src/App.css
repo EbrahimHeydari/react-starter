@@ -53,8 +53,47 @@ li a.active {
   display: inline-block;
 }
 
-.box {
+.wrapper {
   color: #004b88;
   margin: 10px 0;
   text-align: center;
+}
+
+/* intersection observer api */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cornflowerblue;
+  color: rgba(32, 36, 41, 1);
+  font-weight: 900;
+  font-size: 18px;
+  width: 500px;
+  height: 250px;
+}
+
+.isVisible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: cornflowerblue;
+  color: rgba(32, 36, 41, 1);
+  font-size: 20px;
+  padding: 40px;
 }
