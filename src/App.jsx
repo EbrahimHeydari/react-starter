@@ -81,33 +81,7 @@
 
 // export default App
 
-// Library (state)
-// import React from 'react'
-// import BookTheme from './Project/Library/contexts/theme'
-// import BookProvider from './Project/Library/contexts/book'
-// import BookForm from './Project/Library/components/bookForm'
-// import BookList from './Project/Library/components/bookList'
-// import BookNavbar from './Project/Library/components/bookNavbar'
-// import ToggleTheme from './Project/Library/components/toggleTheme'
-
-// function App() {
-//   return (
-//     <div className='App'>
-//       <BookTheme>
-//         <BookProvider>
-//           <BookNavbar/>
-//           <BookList/>
-//           <BookForm/>
-//           <ToggleTheme/>
-//         </BookProvider>
-//       </BookTheme>
-//     </div>
-//   )
-// }
-
-// export default App
-
-// UseImperativeHandle Example
+// // UseImperativeHandle Example
 // import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 
 // // Parent Component
@@ -137,6 +111,33 @@
 // 		</div>
 // 	)
 // })
+
+
+// Library (state)
+// import React from 'react'
+// import BookTheme from './Project/Library/contexts/theme'
+// import BookProvider from './Project/Library/contexts/book'
+// import BookForm from './Project/Library/components/bookForm'
+// import BookList from './Project/Library/components/bookList'
+// import BookNavbar from './Project/Library/components/bookNavbar'
+// import ToggleTheme from './Project/Library/components/toggleTheme'
+
+// function App() {
+//   return (
+//     <div className='App'>
+//       <BookTheme>
+//         <BookProvider>
+//           <BookNavbar/>
+//           <BookList/>
+//           <BookForm/>
+//           <ToggleTheme/>
+//         </BookProvider>
+//       </BookTheme>
+//     </div>
+//   )
+// }
+
+// export default App
 
 // Favorites (Reducer)
 import React from 'react'
