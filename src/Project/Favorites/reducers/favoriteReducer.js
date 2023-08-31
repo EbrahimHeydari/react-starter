@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid'
 
-export const FavoriteReducer = (state, action) => {
+const FavoriteReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_FAVORITE':
       return [
@@ -18,3 +18,5 @@ export const FavoriteReducer = (state, action) => {
       return state
   }
 }
+
+export default FavoriteReducer

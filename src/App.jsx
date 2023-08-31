@@ -12,10 +12,10 @@
 
 // Practice (Router)
 // import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom'
-// import Home from './Practice/Router/Home'
-// import About from './Practice/Router/About'
-// import Contact from './Practice/Router/Contact'
-// import Support from './Practice/Router/Support'
+// import Home from './Router/Home'
+// import About from './Router/About'
+// import Contact from './Router/Contact'
+// import Support from './Router/Support'
 // import './App.css'
 
 // function App() {
@@ -52,37 +52,8 @@
 
 // export default App
 
-// Practice (Hooks) & (ContextAPI)
-// import './App.css'
-// import LoginProvider from './Practice/ContextAPI/contexts/LoginContext'
-// import ThemeProvider from './Practice/ContextAPI/contexts/ThemeContext'
-// import BookListHook from './Practice/Hooks/components/BookListHook'
-// import NavbarHook from './Practice/Hooks/components/NavbarHook'
-// import ChangeThemeHook from './Practice/Hooks/components/ChangeThemeHook'
-// import BookListProvider from './Practice/Hooks/context/BookContextHook'
-
-// function App() {
-//   return (
-//     <div className='App'>
-
-//       {/* (Context in Hooks) */}
-// <ThemeProvider>
-//   <LoginProvider>
-//     <NavbarHook />
-//     <BookListProvider>
-//       <BookListHook />
-//     </BookListProvider>
-//     <ChangeThemeHook />
-//   </LoginProvider>
-// </ThemeProvider>
-//     </div>
-//   )
-// }
-
-// export default App
-
 // // UseImperativeHandle and useRef Example
-// import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
+// import { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 
 // // Parent Component
 // const App = () => {
@@ -112,8 +83,7 @@
 // 	)
 // })
 
-// Library (state)
-// import React from 'react'
+// Library (Context with useState)
 // import BookTheme from './Project/Library/contexts/theme'
 // import BookProvider from './Project/Library/contexts/book'
 // import BookForm from './Project/Library/components/bookForm'
@@ -138,8 +108,7 @@
 
 // export default App
 
-// Favorites (Reducer)
-// import React from 'react'
+// Favorites (Context with useReducer)
 // import FavoriteTheme from './Project/Favorites/contexts/theme'
 // import FavoriteProvider from './Project/Favorites/contexts/favorite'
 // import ChangeTheme from './Project/Favorites/components/changeTheme'
@@ -165,7 +134,6 @@
 // export default App
 
 // intersection observer api hook
-import React from 'react'
 import useElementOnScreen from './hooks/useElementOnScreen'
 
 const App = () => {

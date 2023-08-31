@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
 import { FavoriteContext } from '../contexts/favorite'
 import { ThemeContext } from '../contexts/theme'
 import FavoriteDetail from './favoriteDetail'
+import { useContext } from 'react'
 
 const FavoriteList = () => {
   const { favorites } = useContext(FavoriteContext)

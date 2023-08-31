@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react'
 import { FavoriteContext } from '../contexts/favorite'
 import { ThemeContext } from '../contexts/theme'
+import { useContext, useState } from 'react'
 
 const FavoriteForm = () => {
   const { dispatch } = useContext(FavoriteContext)

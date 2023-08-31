@@ -1,5 +1,5 @@
-import React, { useReducer, createContext, useContext, useEffect } from 'react'
-import { FavoriteReducer } from '../reducers/favoriteReducer'
+import { useReducer, createContext, useContext, useEffect } from 'react'
+import FavoriteReducer from '../reducers/favoriteReducer'
 import { ThemeContext } from './theme'
 
 export const FavoriteContext = createContext()

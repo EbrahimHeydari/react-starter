@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 import { ThemeContext } from './theme'
 
 export const BookContext = createContext()
