@@ -52,37 +52,6 @@
 
 // export default App
 
-// // UseImperativeHandle and useRef Example
-// import { forwardRef, useImperativeHandle, useRef, useState } from 'react'
-
-// // Parent Component
-// const App = () => {
-// 	const ref = useRef()
-
-// 	return (
-// 		<div>
-// 			<Button ref={ref} />
-// 			<button onClick={() => ref.current.increment()}>another button</button>
-// 		</div>
-// 	)
-// }
-
-// export default App
-
-// // Child Component
-// const Button = forwardRef((props, ref) => {
-// 	useImperativeHandle(ref, () => ({ increment }))
-
-// 	const [count, setCount] = useState(0)
-// 	const increment = () => setCount(count + 1)
-// 	return (
-// 		<div>
-// 			<button onClick={increment}>click</button>
-// 			<h2>Count: {count}</h2>
-// 		</div>
-// 	)
-// })
-
 // Library (Context with useState)
 // import BookTheme from './Project/Library/contexts/theme'
 // import BookProvider from './Project/Library/contexts/book'
@@ -134,29 +103,61 @@
 // export default App
 
 // intersection observer api hook
-import useElementOnScreen from './hooks/useElementOnScreen'
+// import useElementOnScreen from './hooks/useElementOnScreen'
+
+// const App = () => {
+// 	const [containerRef, isVisible] = useElementOnScreen({
+// 		root: null,
+// 		rootMargin: '0px',
+// 		threshold: 1.0,
+// 	})
+
+// 	return (
+// 		<div className='App'>
+// 			<div className='isVisible'>
+// 				{isVisible ? 'IN VIEWPORT' : 'NOT IN VIEWPORT'}
+// 			</div>
+// 			<div className='section'></div>
+// 			<div
+// 				className='box'
+// 				ref={containerRef}>
+// 				<img
+// 					src='/logo192.png'
+// 					alt='logo'
+// 				/>
+// 			</div>
+// 		</div>
+// 	)
+// }
+
+// export default App
+
+// Hooks (built-in & custom) Examples
+import UseRefExample1 from './hooks/examples/UseRefExample1'
+import UseRefExample2 from './hooks/examples/UseRefExample2'
+import UseRefExample3 from './hooks/examples/UseRefExample3'
+import UseMemoExample from './hooks/examples/UseMemoExample'
+import UseCallbackExample from './hooks/examples/UseCallbackExample'
+import CustomHookExample1 from './hooks/examples/CustomHookExample1'
+import CustomHookExample2 from './hooks/examples/CustomHookExample2'
+import UseImperativeHandleExample from './hooks/examples/UseImperativeHandleExample'
 
 const App = () => {
-	const [containerRef, isVisible] = useElementOnScreen({
-		root: null,
-		rootMargin: '0px',
-		threshold: 1.0,
-	})
-
 	return (
-		<div className='App'>
-			<div className='isVisible'>
-				{isVisible ? 'IN VIEWPORT' : 'NOT IN VIEWPORT'}
-			</div>
-			<div className='section'></div>
-			<div
-				className='box'
-				ref={containerRef}>
-				<img
-					src='/logo192.png'
-					alt='logo'
-				/>
-			</div>
+		<div dir='auto'>
+			{/* <UseRefExample1 />
+			<UseRefExample2 />
+			<UseRefExample3 /> */}
+
+			{/* <UseMemoExample /> */}
+
+			{/* <UseCallbackExample /> */}
+
+			{/* <UseImperativeHandleExample /> */}
+
+			{/* <CustomHookExample1 /> */}
+			
+			<CustomHookExample2 />
 		</div>
 	)
 }
