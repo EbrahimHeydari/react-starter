@@ -133,32 +133,46 @@
 // export default App
 
 // Hooks (built-in & custom) Examples
-import UseRefExample1 from './hooks/examples/UseRefExample1'
-import UseRefExample2 from './hooks/examples/UseRefExample2'
-import UseRefExample3 from './hooks/examples/UseRefExample3'
-import UseMemoExample from './hooks/examples/UseMemoExample'
-import UseCallbackExample from './hooks/examples/UseCallbackExample'
-import CustomHookExample1 from './hooks/examples/CustomHookExample1'
-import CustomHookExample2 from './hooks/examples/CustomHookExample2'
-import UseImperativeHandleExample from './hooks/examples/UseImperativeHandleExample'
+// import UseRefExample1 from './hooks/examples/UseRefExample1'
+// import UseRefExample2 from './hooks/examples/UseRefExample2'
+// import UseRefExample3 from './hooks/examples/UseRefExample3'
+// import UseMemoExample from './hooks/examples/UseMemoExample'
+// import UseCallbackExample from './hooks/examples/UseCallbackExample'
+// import CustomHookExample1 from './hooks/examples/CustomHookExample1'
+// import CustomHookExample2 from './hooks/examples/CustomHookExample2'
+// import UseImperativeHandleExample from './hooks/examples/UseImperativeHandleExample'
+
+// const App = () => {
+// 	return (
+// 		<div dir='auto'>
+// 			{/* <UseRefExample1 />
+// 			<UseRefExample2 />
+// 			<UseRefExample3 /> */}
+
+// 			{/* <UseMemoExample /> */}
+
+// 			{/* <UseCallbackExample /> */}
+
+// 			{/* <UseImperativeHandleExample /> */}
+
+// 			{/* <CustomHookExample1 /> */}
+
+// 			<CustomHookExample2 />
+// 		</div>
+// 	)
+// }
+
+// export default App
+
+// Suspense example
+import { Suspense } from 'react'
+import Names from './components/Names'
 
 const App = () => {
 	return (
-		<div dir='auto'>
-			{/* <UseRefExample1 />
-			<UseRefExample2 />
-			<UseRefExample3 /> */}
-
-			{/* <UseMemoExample /> */}
-
-			{/* <UseCallbackExample /> */}
-
-			{/* <UseImperativeHandleExample /> */}
-
-			{/* <CustomHookExample1 /> */}
-			
-			<CustomHookExample2 />
-		</div>
+		<Suspense fallback={<h1 dir='ltr'>Loading...</h1>}>
+			<Names />
+		</Suspense>
 	)
 }
 
