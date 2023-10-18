@@ -10,7 +10,7 @@
 
 // export default App
 
-// Practice (Router)
+// Routing
 // import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom'
 // import Home from './Router/Home'
 // import About from './Router/About'
@@ -144,7 +144,7 @@
 
 // const App = () => {
 // 	return (
-// 		<div dir='auto'>
+// 		<div>
 // 			{/* <UseRefExample1 />
 // 			<UseRefExample2 />
 // 			<UseRefExample3 /> */}
@@ -165,14 +165,37 @@
 // export default App
 
 // Suspense example
-import { Suspense } from 'react'
-import Names from './components/Names'
+// import { Suspense } from 'react'
+// import Names from './components/Names'
+
+// const App = () => {
+// 	return (
+// 		<Suspense fallback={<h1>Loading...</h1>}>
+// 			<Names />
+// 		</Suspense>
+// 	)
+// }
+
+// export default App
+
+// Error Boundary Example
+import ErrorBoundary from './components/ErrorBoundary'
+import ErrorFallback from './components/ErrorFallback'
+import ErrorCounter from './components/ErrorCounter'
+import { useState } from 'react'
 
 const App = () => {
+	const [count, setCount] = useState(0)
+
 	return (
-		<Suspense fallback={<h1 dir='ltr'>Loading...</h1>}>
-			<Names />
-		</Suspense>
+		<div>
+			<button onClick={() => setCount(count => count + 1)}>click</button>
+			<ErrorBoundary
+				key={count}
+				FallbackComponent={ErrorFallback}>
+				<ErrorCounter count={count} />
+			</ErrorBoundary>
+		</div>
 	)
 }
 
