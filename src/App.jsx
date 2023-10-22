@@ -52,30 +52,25 @@
 
 // export default App
 
-// Library (Context with useState)
-// import BookTheme from './Project/Library/contexts/theme'
-// import BookProvider from './Project/Library/contexts/book'
-// import BookForm from './Project/Library/components/bookForm'
-// import BookList from './Project/Library/components/bookList'
-// import BookNavbar from './Project/Library/components/bookNavbar'
-// import ToggleTheme from './Project/Library/components/toggleTheme'
+// Library (Zustand)
+import BookWrapper from './Project/Library/components/BookWrapper'
+import BookForm from './Project/Library/components/bookForm'
+import BookList from './Project/Library/components/bookList'
+import BookNavbar from './Project/Library/components/bookNavbar'
+import ToggleTheme from './Project/Library/components/toggleTheme'
 
-// function App() {
-//   return (
-//     <div className='App'>
-//       <BookTheme>
-//         <BookProvider>
-//           <BookNavbar/>
-//           <BookList/>
-//           <BookForm/>
-//           <ToggleTheme/>
-//         </BookProvider>
-//       </BookTheme>
-//     </div>
-//   )
-// }
+function App() {
+	return (
+		<BookWrapper>
+			<BookNavbar />
+			<BookList />
+			<BookForm />
+			<ToggleTheme />
+		</BookWrapper>
+	)
+}
 
-// export default App
+export default App
 
 // Favorites (Context with useReducer)
 // import FavoriteTheme from './Project/Favorites/contexts/theme'
@@ -179,24 +174,24 @@
 // export default App
 
 // Error Boundary Example
-import ErrorBoundary from './components/ErrorBoundary'
-import ErrorFallback from './components/ErrorFallback'
-import ErrorCounter from './components/ErrorCounter'
-import { useState } from 'react'
+// import ErrorBoundary from './components/ErrorBoundary'
+// import ErrorFallback from './components/ErrorFallback'
+// import ErrorCounter from './components/ErrorCounter'
+// import { useState } from 'react'
 
-const App = () => {
-	const [count, setCount] = useState(0)
+// const App = () => {
+// 	const [count, setCount] = useState(0)
 
-	return (
-		<div>
-			<button onClick={() => setCount(count => count + 1)}>click</button>
-			<ErrorBoundary
-				key={count}
-				FallbackComponent={ErrorFallback}>
-				<ErrorCounter count={count} />
-			</ErrorBoundary>
-		</div>
-	)
-}
+// 	return (
+// 		<div>
+// 			<button onClick={() => setCount(count => count + 1)}>click</button>
+// 			<ErrorBoundary
+// 				key={count}
+// 				FallbackComponent={ErrorFallback}>
+// 				<ErrorCounter count={count} />
+// 			</ErrorBoundary>
+// 		</div>
+// 	)
+// }
 
-export default App
+// export default App

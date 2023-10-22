@@ -1,11 +1,8 @@
-import { ThemeContext } from '../contexts/theme'
-import { BookContext } from '../contexts/book'
-import { useContext } from 'react'
+import useBookStore from '../store/bookStore'
 import remove from '../delete.svg'
 
 const BookDetail = ({ book }) => {
-	const { removeBook } = useContext(BookContext)
-	const { isLight, light, dark } = useContext(ThemeContext)
+	const { removeBook, isLight, light, dark } = useBookStore(state => state)
 	const theme = isLight ? light : dark
 
 	return (

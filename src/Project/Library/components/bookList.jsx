@@ -1,12 +1,9 @@
-import { ThemeContext } from '../contexts/theme'
-import { BookContext } from '../contexts/book'
+import useBookStore from '../store/bookStore'
 import BookDetail from './bookDetails'
-import { useContext } from 'react'
 
 const BookList = () => {
-	const { isLight, light, dark } = useContext(ThemeContext)
+	const { books, isLight, light, dark } = useBookStore(state => state)
 	const theme = isLight ? light : dark
-	const { books } = useContext(BookContext)
 
 	return books.length ? (
 		<div

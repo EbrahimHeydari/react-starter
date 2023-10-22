@@ -1,18 +1,17 @@
-import { ThemeContext } from '../contexts/theme'
-import { useContext } from 'react'
+import useBookStore from '../store/bookStore'
 
 const ToggleTheme = () => {
-  const { isLight, light, dark, ToggleTheme } = useContext(ThemeContext)
-  const theme = isLight ? light : dark
+	const { isLight, light, dark, toggleTheme } = useBookStore(state => state)
+	const theme = isLight ? light : dark
 
-  return (
-    <button
-      onClick={ToggleTheme}
-      className='send'
-      style={{ background: theme.item, color: theme.text }}>
-      تغییر حالت
-    </button>
-  )
+	return (
+		<button
+			onClick={toggleTheme}
+			className='send'
+			style={{ background: theme.item, color: theme.text }}>
+			تغییر حالت
+		</button>
+	)
 }
 
 export default ToggleTheme

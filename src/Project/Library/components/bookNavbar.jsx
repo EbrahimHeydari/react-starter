@@ -1,23 +1,20 @@
-import { ThemeContext } from '../contexts/theme'
-import { BookContext } from '../contexts/book'
-import { useContext } from 'react'
+import useBookStore from '../store/bookStore'
 
 const BookNavbar = () => {
-  const { isLight, light, dark } = useContext(ThemeContext)
-  const theme = isLight ? light : dark
-  const { books } = useContext(BookContext)
+	const {books, isLight, light, dark } = useBookStore(state => state)
+	const theme = isLight ? light : dark
 
-  return (
-    <div
-      className='navbar'
-      style={{ background: theme.item, color: theme.text }}>
-      <h1>لیست کتاب های شما</h1>
-      <p>
-        تعداد:
-        {` ${books.length} `}
-      </p>
-    </div>
-  )
+	return (
+		<div
+			className='navbar'
+			style={{ background: theme.item, color: theme.text }}>
+			<h1>لیست کتاب های شما</h1>
+			<p>
+				تعداد:
+				{` ${books.length} `}
+			</p>
+		</div>
+	)
 }
 
 export default BookNavbar
