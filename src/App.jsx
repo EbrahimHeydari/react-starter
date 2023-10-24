@@ -10,63 +10,41 @@
 
 // export default App
 
-// Routing
-// import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom'
-// import Home from './Router/Home'
-// import About from './Router/About'
-// import Contact from './Router/Contact'
-// import Support from './Router/Support'
-// import './App.css'
-
-// function App() {
-//   return (
-//     <Router>
-//       <div className='App'>
-//         <nav>
-//           <ul>
-//             <li>
-//               <NavLink to='/'>Home</NavLink>
-//             </li>
-//             <li>
-//               <NavLink to='/About'>About</NavLink>
-//             </li>
-//             <li>
-//               <NavLink to='/Contact'>Contact</NavLink>
-//             </li>
-//             <li>
-//               <NavLink to='/Support'>Support</NavLink>
-//             </li>
-//           </ul>
-//         </nav>
-//         <p>Let's Add Routing</p>
-//         <Routes>
-//           <Route path='/About' element={<About />} />
-//           <Route path='/support' element={<Support />} />
-//           <Route path='/Contact' element={<Contact />} />
-//           <Route path='/' element={<Home />} />
-//         </Routes>
-//       </div>
-//     </Router>
-//   )
-// }
-
-// export default App
-
-// Library (Zustand)
-import BookWrapper from './Project/Library/components/BookWrapper'
-import BookForm from './Project/Library/components/bookForm'
-import BookList from './Project/Library/components/bookList'
-import BookNavbar from './Project/Library/components/bookNavbar'
-import ToggleTheme from './Project/Library/components/toggleTheme'
+// Routing example
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './Router/Home'
+import About from './Router/About'
+import Contact from './Router/Contact'
+import Support from './Router/Support'
+import Navbar from './Router/Navbar'
 
 function App() {
 	return (
-		<BookWrapper>
-			<BookNavbar />
-			<BookList />
-			<BookForm />
-			<ToggleTheme />
-		</BookWrapper>
+		<BrowserRouter>
+			<div className='App'>
+				<Navbar />
+
+				<p>Let's Add Routing</p>
+				<Routes>
+					<Route
+						path='/About'
+						element={<About />}
+					/>
+					<Route
+						path='/support'
+						element={<Support />}
+					/>
+					<Route
+						path='/Contact'
+						element={<Contact />}
+					/>
+					<Route
+						path='/'
+						element={<Home />}
+					/>
+				</Routes>
+			</div>
+		</BrowserRouter>
 	)
 }
 
