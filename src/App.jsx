@@ -1,4 +1,4 @@
-// portals
+// portals example
 // import ReactDOM from 'react-dom'
 // function App() {
 //   // Creating a portal
@@ -11,46 +11,66 @@
 // export default App
 
 // Routing example
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './Router/Home'
-import About from './Router/About'
-import Contact from './Router/Contact'
-import Support from './Router/Support'
-import Navbar from './Router/Navbar'
+// import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// import Home from './Router/Home'
+// import About from './Router/About'
+// import Contact from './Router/Contact'
+// import Support from './Router/Support'
+// import Navbar from './Router/Navbar'
 
-function App() {
-	return (
-		<BrowserRouter>
-			<div className='App'>
-				<Navbar />
+// function App() {
+// 	return (
+// 		<BrowserRouter>
+// 			<div className='App'>
+// 				<Navbar />
 
-				<p>Let's Add Routing</p>
-				<Routes>
-					<Route
-						path='/About'
-						element={<About />}
-					/>
-					<Route
-						path='/support'
-						element={<Support />}
-					/>
-					<Route
-						path='/Contact'
-						element={<Contact />}
-					/>
-					<Route
-						path='/'
-						element={<Home />}
-					/>
-				</Routes>
-			</div>
-		</BrowserRouter>
-	)
-}
+// 				<p>Let's Add Routing</p>
+// 				<Routes>
+// 					<Route
+// 						path='/About'
+// 						element={<About />}
+// 					/>
+// 					<Route
+// 						path='/support'
+// 						element={<Support />}
+// 					/>
+// 					<Route
+// 						path='/Contact'
+// 						element={<Contact />}
+// 					/>
+// 					<Route
+// 						path='/'
+// 						element={<Home />}
+// 					/>
+// 				</Routes>
+// 			</div>
+// 		</BrowserRouter>
+// 	)
+// }
 
-export default App
+// export default App
 
-// Favorites (Context with useReducer)
+// Zustand example {Library}
+// import BookWrapper from './Project/Library/components/BookWrapper'
+// import BookForm from './Project/Library/components/bookForm'
+// import BookList from './Project/Library/components/bookList'
+// import BookNavbar from './Project/Library/components/bookNavbar'
+// import ToggleTheme from './Project/Library/components/toggleTheme'
+
+// function App() {
+// 	return (
+// 		<BookWrapper>
+// 			<BookNavbar />
+// 			<BookList />
+// 			<BookForm />
+// 			<ToggleTheme />
+// 		</BookWrapper>
+// 	)
+// }
+
+// export default App
+
+// Context with useReducer example (Favorites)
 // import FavoriteTheme from './Project/Favorites/contexts/theme'
 // import FavoriteProvider from './Project/Favorites/contexts/favorite'
 // import ChangeTheme from './Project/Favorites/components/changeTheme'
@@ -75,7 +95,7 @@ export default App
 
 // export default App
 
-// intersection observer api hook
+// intersection observer api hook example
 // import useElementOnScreen from './hooks/useElementOnScreen'
 
 // const App = () => {
@@ -105,7 +125,7 @@ export default App
 
 // export default App
 
-// Hooks (built-in & custom) Examples
+// Hooks (built-in & custom) example
 // import UseRefExample1 from './hooks/examples/UseRefExample1'
 // import UseRefExample2 from './hooks/examples/UseRefExample2'
 // import UseRefExample3 from './hooks/examples/UseRefExample3'
@@ -137,21 +157,21 @@ export default App
 
 // export default App
 
-// Suspense example
-// import { Suspense } from 'react'
-// import Names from './components/Names'
+// Suspense & lazy() example
+import { Suspense, lazy } from 'react'
+const Names = lazy(() => import('./components/Names'))
 
-// const App = () => {
-// 	return (
-// 		<Suspense fallback={<h1>Loading...</h1>}>
-// 			<Names />
-// 		</Suspense>
-// 	)
-// }
+const App = () => {
+	return (
+		<Suspense fallback={<h1>Loading...</h1>}>
+			<Names />
+		</Suspense>
+	)
+}
 
-// export default App
+export default App
 
-// Error Boundary Example
+// Error Boundary example
 // import ErrorBoundary from './components/ErrorBoundary'
 // import ErrorFallback from './components/ErrorFallback'
 // import ErrorCounter from './components/ErrorCounter'
