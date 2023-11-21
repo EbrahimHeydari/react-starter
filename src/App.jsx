@@ -159,7 +159,8 @@
 
 // Suspense & lazy() example
 import { Suspense, lazy } from 'react'
-const Names = lazy(() => import('./components/Names'))
+import { delay } from './utils/fetchData'
+const Names = lazy(() => delay(import('./components/Names')))
 
 const App = () => {
 	return (

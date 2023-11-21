@@ -9,3 +9,8 @@ function fetchData(url) {
 }
 
 export default fetchData
+
+// Helper function to simulate a 2 seconds delay
+export function delay(promise) {
+	return new Promise(resolve => setTimeout(resolve, 3000)).then(() => promise)
+}
